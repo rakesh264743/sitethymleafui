@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Site!</title>
+    <title>Title</title>
+</head>
+<body>
+     <section>
+         <div class="col-md-10" th:fragment="sitenavbar">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" th:href="@{/viewsite}" th:classappend="${#request.getRequestURI() == '/viewsite' ? 'active' : ''}" href="#">View Site</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/addsite}" th:classappend="${#request.getRequestURI() == '/addsite' ? 'active' : ''}"  href="#">Add Site</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/modifysite}" th:classappend="${#request.getRequestURI() == '/modifysite' ? 'active' : ''}"  href="#">Modify Site</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:href="@{/deletesite}" th:classappend="${#request.getRequestURI() == '/deletesite' ? 'active' : ''}" href="#">Delete Site</a>
+            </li>
+
+        
+        </ul>
+               <!-- <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Site Id</th>
+                        <th scope="col">Site Name</th>
+                        <th scope="col">Feeds</th>
+                        <th scope="col">Counties</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Last Updated</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>b-jobz.com</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>Active</td>
+                        <td>Date Time</td>
+                    </tr>
+
+                    </tbody>
+                </table> -->
+            </div>
+        </div>
+    </div>
+     </section>
+   
+
+</body>
+</html>
